@@ -9,7 +9,7 @@ namespace Taschenrechner
         {
             CultureInfo culture = CultureInfo.InvariantCulture; // ist dafür das der punkt als dezimalzahl anerkannt wird.
 
-            function = function.Replace(',','.'); // aendert Kommas in Punkt damit man dezimalzahlen verweden kann.
+            function = function.Replace(',', '.'); // aendert Kommas in Punkt damit man dezimalzahlen verweden kann.
 
             string[] elements = function.Split(' '); // Teilt die Nummern , Klammern und Operationen in ein array auf
 
@@ -37,7 +37,7 @@ namespace Taschenrechner
                         break;
                 }
             }
-                return result;
+            return result;
         }
     }
-hallo123
+}
