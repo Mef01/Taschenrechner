@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Taschenrechner
 {
@@ -16,7 +12,7 @@ namespace Taschenrechner
 
             do
             {
-                Console.WriteLine("Geben Sie Ihre Mathematische Gleichung ein (mit Leerzeichen):");
+                Console.WriteLine("Geben Sie Ihre Mathematische Gleichung ein (mit Leerzeichen nach jeder Zahl bzw. Operation):");
                 mathVariable.function = Console.ReadLine();
 
                 if (!mathVariable.function.Contains(" ")) // Wenn kein leerzeichen verwendet wird kommt die fehlermeldung
@@ -28,11 +24,11 @@ namespace Taschenrechner
 
             double result = Calculation.Calculate(mathVariable.function);
 
-            Console.Clear();
-            Console.WriteLine($"Ihre Gleichung lautet: {mathVariable.function}");
+            Console.Clear(); // Löscht alle Vorherigen console ausgaben 
+            Console.WriteLine($"Ihre Gleichung lautet: {mathVariable.function}"); // Ausgabe von der Eingeben Schaltung
 
-            Console.WriteLine($"Das Ergebnis lautet:{result}");
-            Console.ReadLine();
+            Console.WriteLine($"Das Ergebnis lautet:{result}"); // Ausgabe vom Rechenergebnis
+            Console.ReadLine(); // Stopt das Program damit es nicht direkt schließt
         }
     }
 }
